@@ -1,0 +1,249 @@
+.customizer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.customizer-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 550px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  border: 3px solid #f97316;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.customizer-modal h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.emoji-display {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.customizer-section {
+  margin-bottom: 2rem;
+}
+
+.customizer-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.size-options,
+.toppings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-label:hover,
+.checkbox-label:hover {
+  border-color: #f97316;
+  background: #fef3c7;
+  transform: translateX(4px);
+}
+
+.option-label input,
+.checkbox-label input {
+  margin-right: 0.75rem;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #f97316;
+}
+
+.checkbox-text {
+  flex: 1;
+  color: #374151;
+  font-weight: 500;
+}
+
+.topping-price {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.promo-section {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.promo-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.promo-input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.promo-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+.promo-success {
+  color: #22c55e;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+
+.promo-hint {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.customizer-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 3px solid #f97316;
+}
+
+.price-breakdown {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.price-row.discount {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.price-row.final-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  border-top: 2px solid #f97316;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.price-value {
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.4rem;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  color: white;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+.confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
