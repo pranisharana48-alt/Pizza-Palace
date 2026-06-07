@@ -1,0 +1,239 @@
+.checkout-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  animation: fadeIn 0.4s ease;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  max-width: 550px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  border: 3px solid #f97316;
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.confirmation-icon,
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  animation: bounce 0.8s ease infinite;
+}
+
+.success-icon {
+  animation: pulse 0.8s ease;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.confirmation-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.order-details {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(249, 115, 22, 0.2);
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row.total {
+  border-top: 3px solid #f97316;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.detail-row.total span:last-child {
+  color: #f97316;
+  font-size: 1.5rem;
+}
+
+.thank-you {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.order-number {
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  margin: 2rem 0;
+  animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.order-number p:first-child {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.big-number {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+.order-details-text {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.order-details-text span {
+  color: #f97316;
+  font-size: 1.4rem;
+}
+
+.wait-time {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.pickup-info {
+  font-size: 1rem;
+  color: #16a34a;
+  margin: 0.5rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.confirm-btn,
+.new-order-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  color: white;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confirm-btn:hover,
+.new-order-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.6);
+}
+
+.new-order-btn {
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .confirmation-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .confirmation-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-icon,
+  .success-icon {
+    font-size: 3.5rem;
+  }
+
+  .big-number {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .confirm-btn,
+  .new-order-btn {
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+}
